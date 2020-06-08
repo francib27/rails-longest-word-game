@@ -1,0 +1,11 @@
+<h1>Result</h1>
+
+<% if @english_word %>
+  <% if @valid_word %>
+    <p><strong>Congratulation!</strong> <%= @guess.upcase %>is a valid English word!</p>
+  <% else %>
+    <p>Sorry, but <strong><%= @guess.upcase %></strong></p> can't be built out of <%= @grid_letters %>
+  <%end%>
+<% else %>
+  <p>Sorry, but <strong><%= @guess.upcase %></strong> does not seem to be a valid English word</p>
+<%end%>
